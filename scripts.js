@@ -1,9 +1,7 @@
-document.addEventListener('mouseover', myFunction)
-
 var arr = ['▓', '▒', '░', '▒']
 var index = 0
 
-function myFunction() {
+window.onload = function myFunction() {
   const element = document.getElementById('demo')
   setInterval(function () {
     if (index == arr.length) index = 0
