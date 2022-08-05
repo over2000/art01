@@ -16,22 +16,46 @@
     <script>
       jQuery(function ($) {
         var characters = '▓▒░'
+        var i
 
         function changeCharacter() {
-          var randomIndex = Math.floor(characters.length * Math.random())
-          var randomCharacter = characters[randomIndex]
-          $('#character').text(randomCharacter)
+          for (i = 0; i < 12; i++) {
+            var randomIndex = Math.floor(characters.length * Math.random())
+            var randomCharacter = characters[randomIndex]
+            $(`#character${i}`).text(randomCharacter)
+          }
         }
-        $('#character').mouseenter(changeCharacter)
-        $('#character').mouseleave(changeCharacter)
+        for (i = 0; i < 12; i++) {
+          $(`#character${i}`).mouseenter(changeCharacter)
+          $(`#character${i}`).mouseleave(changeCharacter)
+        }
       })
     </script>
   </head>
 
   <body>
     <p id="demo" />
-    <p id="demo" />
-    <div id="character">@</div>
+
+    <center>
+      <table>
+        <tr>
+          <td id="character0">░</td>
+          <td id="character1">░</td>
+          <td id="character2">░</td>
+          <td id="character3">░</td>
+          <td id="character4">░</td>
+          <td id="character5">░</td>
+        </tr>
+        <tr>
+          <td id="character6">░</td>
+          <td id="character7">░</td>
+          <td id="character8">░</td>
+          <td id="character9">░</td>
+          <td id="character10">░</td>
+          <td id="character11">░</td>
+        </tr>
+      </table>
+    </center>
 
     <script src="sketch.js"></script>
   </body>
