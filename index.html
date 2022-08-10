@@ -15,6 +15,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
       jQuery(function ($) {
+        var $table = $('<table>')
+        // caption
+        $table
+          // thead
+          .append('<thead>')
+          .children('thead')
+          .append('<tr />')
+          .children('tr')
+
+        //tbody
+        var $tbody = $table.append('<tbody />').children('tbody')
+
+        // add row
+        $tbody.append('<tr />').children('tr:last')
+        for (i = 0; i < 5; i++) {
+          $('div').append(`<td id="character${i}">░</td>`)
+        }
+        // add table to dom
+        $table.appendTo('#dynamicTable')
+
         var characters = '▓▒░'
         var i
 
@@ -30,32 +50,15 @@
           $(`#character${i}`).mouseleave(changeCharacter)
         }
       })
+
+      // create table
     </script>
   </head>
 
   <body>
-    <p id="demo" />
+    <div id="dynamicTable"></div>
 
-    <center>
-      <table>
-        <tr>
-          <td id="character0">░</td>
-          <td id="character1">░</td>
-          <td id="character2">░</td>
-          <td id="character3">░</td>
-          <td id="character4">░</td>
-          <td id="character5">░</td>
-        </tr>
-        <tr>
-          <td id="character6">░</td>
-          <td id="character7">░</td>
-          <td id="character8">░</td>
-          <td id="character9">░</td>
-          <td id="character10">░</td>
-          <td id="character11">░</td>
-        </tr>
-      </table>
-    </center>
+    <p id="demo" />
 
     <script src="sketch.js"></script>
   </body>
