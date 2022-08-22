@@ -93,7 +93,7 @@ jQuery(function ($) {
         $(`#character${i}`).text(randomCharacter)
       }
     }
-    for (i = 0; i < 500; i++) {
+    for (i = 0; i < 650; i++) {
       $(`#character${i}`).mouseenter(changeCharacter)
       $(`#character${i}`).mouseleave(changeCharacter)
     }

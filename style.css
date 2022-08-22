@@ -8,6 +8,8 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background-color:#0A0C10;
+  color: #39D353;
 }
 
 canvas {
@@ -18,4 +20,5 @@ canvas {
 
 .first {
   margin-top: 250px;
+  cursor: none; 
 }
